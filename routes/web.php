@@ -28,11 +28,11 @@ Route::get('/faq', FAQComponent::class)->name('faq');
 Route::get('/service-details', ServiceDetailsComponent::class)->name('service-details');
 Route::get(uri: '/using-technology', action: UsingTechnologyComponent::class)->name('using-technology');
 
-/*Route::middleware(['auth:sanctum', config('jetstream.auth_session'), 'verified',])->group(function () {
+Route::middleware(['auth:sanctum', config('jetstream.auth_session'), 'verified',])->group(function () {
     Route::get('/dashboard', function () {
         return view('dashboard');
     })->name('dashboard');
-});*/
+});
 
 /* For user */
 Route::middleware(['auth:sanctum', 'verified', 'user-access:user'])->group(function () {
