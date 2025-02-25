@@ -1,19 +1,19 @@
 <div class="sidebar border border-right col-md-3 col-lg-3 p-4 bg-body-tertiary">
     <ul class="nav nav-pills flex-column mb-auto">
         <li class="nav-item">
-            <a wire:navigate href="{{ route('admin.dashboard') }}" class="nav-link @if(Route::currentRouteName() =='admin.dashboard') active @endif">
+            <a wire:navigate href="{{ route('admin.dashboard') }}" class="nav-link link-body-emphasis @if(Route::currentRouteName() =='admin.dashboard') active text-light @endif">
               <svg class="bi pe-none me-2" width="16" height="16"><i class="bi bi-house"></i></svg>
               Dashboard
             </a>
         </li>
         <li class="nav-item">
-          <a href="#" class="nav-link link-body-emphasis">
+          <a href="{{ route('profile.show') }}" class="nav-link link-body-emphasis" target="_blank">
             <svg class="bi pe-none me-2" width="16" height="16"><i class="bi bi-person-circle"></i></svg>
             Admin Profile
           </a>
         </li>
         <li class="nav-item">
-          <a wire:navigate href="{{ route('admin.setting') }}" class="nav-link @if(Route::currentRouteName() =='admin.setting') active @endif">
+          <a wire:navigate href="{{ route('admin.setting') }}" class="nav-link link-body-emphasis @if(Route::currentRouteName() =='admin.setting') active text-light @endif">
             <svg class="bi pe-none me-2" width="16" height="16"><i class="bi bi-gear"></i></svg>
             Settings
           </a>
